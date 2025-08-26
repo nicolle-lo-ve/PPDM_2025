@@ -1,5 +1,5 @@
 fun main() {
-  var opcion: int
+  var opcion: Int
   do {
     println("\n ------- MENÚ PRINCIPAL -------")
     println("1. EVALAUCIÓN DE EMPLEADOS")
@@ -9,9 +9,10 @@ fun main() {
     println("5. SALIR")
     println("Seleccione una opción (1-5): ")
 
-    opcion = readln()
+    opcion = readln().Int()
 
     when (opcion) {
+      1 -> ejercicioEvaluacionEmpleados()
       5 -> println("¡Gracias por usar el programa!")
       else -> println("Opción en desarrollo...")
     }
