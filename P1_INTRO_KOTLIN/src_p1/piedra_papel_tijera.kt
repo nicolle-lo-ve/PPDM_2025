@@ -16,4 +16,11 @@ fun ejercicioPiedraPapelTijera(){
   println(" - tijera ")
   println("Por favor, elige una opción: ")
   val eleccionUsuario = readln().lowercase().trim()
+
+  // Validar elección del usuario
+  if (eleccionUsuario !in opciones) {
+      println("Error: Elección no válida.")
+      println("   Debe ser: piedra, papel o tijera")
+      return
+  }
 }
