@@ -1,9 +1,15 @@
 # PRACTICA 1 INTRODUCCIÓN A KOTLIN
-Autor: Nicolle Lozano
-Fecha: 25/08/2025
+Esta carpeta contiene un programa interactivo en Kotlin que consta de 4 ejercicios prácticos con un menú de navegación unificado.
 
-Esta carpeta contiene 4 ejercicios de introducción a KOTLIN
-1. Evaluación de empleados
-2. Piedra, Papel, Tijera
-3. Calcualdora Elemental
-4. Adivina el Número
+## Estructura del Proyecto
+```
+P1_INTRO_KOTLIN/
+    ├── src_p1/
+        ├── main.kt                  # Menú principal y punto de entrada
+        ├── evaluacion_empleados.kt  
+        ├── piedra_papel_tijera.kt   
+        ├── calculadora_elemental.kt 
+        └── adivina_numero.kt        
+    └── docs_p1/
+        └── readme_p1.md             #  Archivo descriptivo (Actual)
+```
