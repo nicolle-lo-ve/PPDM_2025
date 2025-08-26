@@ -18,6 +18,27 @@ fun ejercicioEvaluacionEmpleados(){
     return
     }
 
+  // Determinar nivel de rendimiento y calcular bonificación
+  val nivel: String
+  val bonificacion = salario * (puntuacion / 10.0)
+
+  when (puntuacion) {
+    in 0 <= .. <= 3 -> {
+      nivel = "Inaceptable"
+    }
+    in 4 <= .. <= 6 -> {
+      nivel = "Aceptable"
+    }
+    in 7 <= .. <= 10 -> {
+      nivel = "Meritorio"
+    }
+    else -> {
+      println ("Error: Puntuación fuera de rango)
+      return
+    }
+  }
+  
+
   
 
 }
