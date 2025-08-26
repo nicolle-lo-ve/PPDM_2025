@@ -38,3 +38,16 @@ P1_INTRO_KOTLIN/
 - 5 intentos para adivinar
 - Pistas de "mayor" o "menor"
 
+## Tecnologías Usadas
+- **Kotlin** 1.9.0
+- **Kotlin Random** para generación de números aleatorios
+- **Readln()** para entrada de usuario
+- **Control de flujo** con when, if-else, y loops
+
+## Como usarlo
+1. Ejecuta el programa desde la terminal
+2. Selecciona una opción del menú principal (1-5)
+3. Sigue las instrucciones específicas de cada ejercicio
+4. Al finalizar cada ejercicio, volverás al menú principal
+5. Selecciona la opción 5 para salir del programa
+
