@@ -3,9 +3,12 @@ fun ejercicioEvaluacionEmpleados(){
   print ("\n ------ EVALUACIÓN DE EMPLEADOS ------ ")
 
   // Pedir salario
-  
   print("Ingrese el salario mensual del empleado: ")
-  val salario = readln()
+  val salario = readln().toDouble()
+
+  // Pedir Puntuación
+  print("Ingrese la puntuación del empleado del 0 al 10: ")
+  val puntuacion = readln().toInt()
 
   if (salario == null || salario <= 0) {
     println("Error: Salario ingresado no válido.")
