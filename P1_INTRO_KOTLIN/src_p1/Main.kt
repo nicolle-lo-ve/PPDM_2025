@@ -13,6 +13,7 @@ fun main() {
 
     when (opcion) {
       1 -> ejercicioEvaluacionEmpleados()
+      2 -> ejercicioPiedraPapelTijera()
       5 -> println("¡Gracias por usar el programa!")
       else -> println("Opción en desarrollo...")
     }
