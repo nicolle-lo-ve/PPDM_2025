@@ -23,4 +23,32 @@ fun ejercicioPiedraPapelTijera(){
       println("   Debe ser: piedra, papel o tijera")
       return
   }
+  
+  // Mostrar elecciones
+  println("\n ------ ELECCIONES ------ ")
+  println("Computadora eligió: $eleccionComputadora")
+  println("Tú elegiste:  $eleccionUsuario")
+
+  // Determinar resultado
+  val resultado = when {
+      eleccionUsuario == eleccionComputadora ->
+          "¡Empate!  Ambos eligieron $eleccionUsuario"
+
+      (eleccionUsuario == "piedra" && eleccionComputadora == "tijera") ->
+          "¡Ganaste!  Piedra rompe Tijera "
+
+      (eleccionUsuario == "papel" && eleccionComputadora == "piedra") ->
+          "¡Ganaste! Papel cubre Piedra "
+
+      (eleccionUsuario == "tijera" && eleccionComputadora == "papel") ->
+          "¡Ganaste!  Tijera corta Papel "
+
+      else -> "¡Perdiste!  $eleccionComputadora gana a $eleccionUsuario"
+  }
+
+  // Mostrar resultado
+
+  println("\n ------ RESULTADO ------")
+  println(resultado)
+  
 }
