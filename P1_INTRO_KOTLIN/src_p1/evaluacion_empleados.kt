@@ -38,7 +38,12 @@ fun ejercicioEvaluacionEmpleados(){
     }
   }
   
+  // Mostrar resultados
+  println(" ------ RESULTADOS DE EVALUACIÓN ------ ")
+  println("Nivel de Rendimiento: $nivel")
+  println("Cantidad de Dinero Recibido: $${bonificacion}")
+  println("Salario Original: $${salario}")
+  println("Puntuación Obtenida: $puntuacion/10")
 
-  
 
 }
