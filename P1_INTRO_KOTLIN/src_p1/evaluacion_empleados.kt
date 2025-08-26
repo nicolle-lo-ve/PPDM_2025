@@ -10,11 +10,14 @@ fun ejercicioEvaluacionEmpleados(){
   print("Ingrese la puntuación del empleado del 0 al 10: ")
   val puntuacion = readln().toInt()
 
-  if (salario == null || salario <= 0) {
-    println("Error: Salario ingresado no válido.")
+  // Validar entradas 
+  if (salario <= 0 || puntuacion < 0 || puntuacion > 10) {
+    println("Error: Datos ingresados no válidos")
+    println("  - Salario debe ser un numero positivo")
+    println("  - Puntuación debe estar entre 0 - 10")
     return
     }
 
-  println("Salario válido: $$salario")
+  
 
 }
