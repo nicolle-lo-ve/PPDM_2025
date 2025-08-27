@@ -21,5 +21,13 @@ fun ejercicioCalculadoraElemental() {
 }
 
 fun realizarOperacion(operacion: Int) {
-  
+  // Pedir números
+  print("Ingrese el primer número: ")
+  val num1 = readln().toDouble()
+  print("Ingrese el segundo número: ")
+  val num2 = readln().toDouble()
+
+  // Variables para resultados
+  val resultado: Double
+  val simbolo: String
 }
