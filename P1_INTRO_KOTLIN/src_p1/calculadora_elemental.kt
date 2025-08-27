@@ -56,5 +56,7 @@ fun realizarOperacion(operacion: Int) {
       }
       else -> return
   }
-  
+  // Mostrar resultado con formato
+  println("\n ------ RESULTADO ------")
+  println("$num1 $simbolo $num2 = $resultado")
 }
