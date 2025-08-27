@@ -11,5 +11,15 @@ fun ejercicioCalculadoraElemental() {
 
     opcion = readln().toInt()
 
+    if (opcion in 1<= ..<= 4) {
+            realizarOperacion(operacion = opcion)
+        } else if (opcion != 5) {
+            println("Opción no válida. Intente nuevamente.")
+        }
+
   } while (opcion != 5)
+}
+
+fun realizarOperacion(operacion: Int) {
+  
 }
