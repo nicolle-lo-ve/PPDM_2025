@@ -30,4 +30,31 @@ fun realizarOperacion(operacion: Int) {
   // Variables para resultados
   val resultado: Double
   val simbolo: String
+
+  // Operaciones 
+  when (operacion) {
+      1 -> {
+          resultado = num1 + num2
+          simbolo = "+"
+      }
+      2 -> {
+          resultado = num1 - num2
+          simbolo = "-"
+      }
+      3 -> {
+          resultado = num1 * num2
+          simbolo = "×"
+      }
+      4 -> {
+          if (num2 == 0.0) {
+              println("Error matemático: La división entre cero no está definida.")
+              println("   Por favor, ingrese un divisor diferente de cero.")
+              return
+          }
+          resultado = num1 / num2
+          simbolo = "÷"
+      }
+      else -> return
+  }
+  
 }
