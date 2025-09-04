@@ -13,6 +13,12 @@ while (intentos > 0 && !adivinado) {
   println("Intentos restantes: $intentos ")
   print("Ingresa tu respuesta: ")
   val respuesta = readln().toInt()
+
+  // Validar respuesta
+  if (respuesta in 1<= ..<= 30) {
+      println("Por favor, ingresa un número válido entre 1 y 30.")
+      continue
+  }
   
   intentos--
 }
