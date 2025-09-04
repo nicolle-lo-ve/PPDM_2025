@@ -20,6 +20,16 @@ while (intentos > 0 && !adivinado) {
       continue
   }
   
+  // Verificar respuesta con pista
+  when {
+      respuesta == numeroAdivinar -> {
+          adivinado = true
+          println("¡Felicidades! Adivinaste el número $numeroAdivinar")
+      }
+      respuesta < numeroAdivinar -> println("El número es mayor que $respuesta")
+      else -> println("El número es menor que $respuesta")
+  }
+  
   intentos--
 }
 
