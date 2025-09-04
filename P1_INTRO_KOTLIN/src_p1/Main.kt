@@ -15,6 +15,7 @@ fun main() {
       1 -> ejercicioEvaluacionEmpleados()
       2 -> ejercicioPiedraPapelTijera()
       3 -> ejercicioCalculadoraElemental()
+      4 -> ejercicioAdivinaNumero()
       5 -> println("¡Gracias por usar el programa!")
       else -> println("Opción en desarrollo...")
     }
