@@ -11,6 +11,11 @@ fun main() {
 
     opcion = readln().Int()
 
+    if (opcion !in 1..5) {
+        println("Opción no válida. Intente nuevamente.")
+        continue
+    }
+
     when (opcion) {
       1 -> ejercicioEvaluacionEmpleados()
       2 -> ejercicioPiedraPapelTijera()
