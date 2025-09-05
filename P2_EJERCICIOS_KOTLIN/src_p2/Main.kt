@@ -15,8 +15,8 @@ fun main() {
         when (opcion) {
             1 -> ejecutarCuentaBancaria()
             2 -> ejecutarProducto()
-            3 -> 
-            4 -> 
+            3 -> ejecutarFiguras()
+            4 -> ejecutarBiblioteca()
             5 -> println("Saliendo del programa...")
             else -> println("Opción no válida. Intente nuevamente.")
         }
