@@ -49,3 +49,15 @@ data class Usuario(
     val apellido: String,
     val edad: Int
 )
+
+interface IBiblioteca {
+    fun registrarMaterial(material: Material)
+    fun registrarUsuario(usuario: Usuario)
+    fun prestamo(material: Material, usuario: Usuario)
+    fun devolucion(material: Material, usuario: Usuario)
+    fun mostrarMaterialesDisponibles()
+    fun mostrarMaterialesReservados(usuario: Usuario)
+    fun obtenerUsuario(nombre: String, apellido: String): Usuario?
+    fun obtenerMaterialDisponible(titulo: String): Material?
+    fun obtenerMaterialPrestado(usuario: Usuario, titulo: String): Material?
+}
