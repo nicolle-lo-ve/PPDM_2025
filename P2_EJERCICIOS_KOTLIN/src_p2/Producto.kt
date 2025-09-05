@@ -21,4 +21,8 @@ class Producto {
     }
 
     fun getDescuento(): Double = descuento
+
+    fun calcularPrecioFinal(): Double {
+        return precio * (1 - descuento / 100)
+    }
 }
