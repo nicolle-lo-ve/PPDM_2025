@@ -118,4 +118,36 @@ class Biblioteca : IBiblioteca {
     }
 }
 
+fun obtenerDatosUsuario(): Usuario {
+    print("Ingrese nombre: ")
+    val nombre = readln()
+    print("Ingrese apellido: ")
+    val apellido = readln()
+    print("Ingrese edad: ")
+    val edad = readln().toIntOrNull() ?: 0
+
+    return Usuario(nombre, apellido, edad)
+}
+
+fun obtenerMaterialPrestado(biblioteca: IBiblioteca, usuario: Usuario): Material? {
+    biblioteca.mostrarMaterialesReservados(usuario)
+    print("Ingrese el título del material: ")
+    val titulo = readln()
+    return biblioteca.obtenerMaterialPrestado(usuario, titulo)
+}
+
+fun obtenerMaterialDisponible(biblioteca: IBiblioteca): Material? {
+    biblioteca.mostrarMaterialesDisponibles()
+    print("Ingrese el título del material: ")
+    val titulo = readln()
+    return biblioteca.obtenerMaterialDisponible(titulo)
+}
+
+fun obtenerUsuario(biblioteca: IBiblioteca): Usuario? {
+    print("Ingrese el nombre del usuario: ")
+    val nombre = readln()
+    print("Ingrese el apellido del usuario: ")
+    val apellido = readln()
+    return biblioteca.obtenerUsuario(nombre, apellido)
+}
 
