@@ -22,3 +22,12 @@ class Rectangulo(private val base: Double, private val altura: Double) : Shape()
     override fun calcularArea(): Double = base * altura
     override fun calcularPerimetro(): Double = 2 * (base + altura)
 }
+
+fun ejecutarFiguras() {
+    println("\n=== FIGURAS GEOMÉTRICAS ===")
+    println("Seleccione la figura:")
+    println("1. Cuadrado")
+    println("2. Círculo")
+    println("3. Rectángulo")
+    print("Opción: ")
+}
