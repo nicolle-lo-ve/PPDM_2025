@@ -13,8 +13,8 @@ fun main() {
         opcion = readln().toInt()
 
         when (opcion) {
-            1 -> 
-            2 -> 
+            1 -> ejecutarCuentaBancaria()
+            2 -> ejecutarProducto()
             3 -> 
             4 -> 
             5 -> println("Saliendo del programa...")
