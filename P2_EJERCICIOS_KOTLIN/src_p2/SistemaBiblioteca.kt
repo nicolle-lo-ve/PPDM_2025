@@ -1,9 +1,10 @@
+// Clase abstracta que representa material bibliográfico
 abstract class Material(
     val titulo: String,
     val autor: String,
     val anioPublicacion: Int
 ) {
-    abstract fun mostrarDetalles()
+    abstract fun mostrarDetalles() // Método abstracto para mostrar detalles específicos
 }
 
 class Libro(
@@ -50,6 +51,7 @@ data class Usuario(
     val edad: Int
 )
 
+// Interfaz que define las operaciones básicas de una biblioteca
 interface IBiblioteca {
     fun registrarMaterial(material: Material)
     fun registrarUsuario(usuario: Usuario)
@@ -62,6 +64,7 @@ interface IBiblioteca {
     fun obtenerMaterialPrestado(usuario: Usuario, titulo: String): Material?
 }
 
+// Implementación concreta del sistema de biblioteca
 class Biblioteca : IBiblioteca {
     private val materialesDisponibles = mutableListOf<Material>()
     private val usuariosRegistrados = mutableListOf<Usuario>()
@@ -73,10 +76,11 @@ class Biblioteca : IBiblioteca {
 
     override fun registrarUsuario(usuario: Usuario) {
         usuariosRegistrados.add(usuario)
-        prestamos[usuario] = mutableListOf()
+        prestamos[usuario] = mutableListOf() // Inicializa lista vacía para sus préstamos
     }
 
     override fun prestamo(material: Material, usuario: Usuario) {
+         // Verifica que el material esté disponible y el usuario esté registrado
         if (material in materialesDisponibles && usuario in usuariosRegistrados) {
             materialesDisponibles.remove(material)
             prestamos[usuario]?.add(material)
@@ -87,6 +91,7 @@ class Biblioteca : IBiblioteca {
     }
 
     override fun devolucion(material: Material, usuario: Usuario) {
+         // Intenta remover el material de los préstamos del usuario
         if (prestamos[usuario]?.remove(material) == true) {
             materialesDisponibles.add(material)
             println("Devolución exitosa de '${material.titulo}'")
@@ -220,5 +225,5 @@ fun ejecutarBiblioteca() {
             6 -> println("Volviendo al menú principal...")
             else -> println("Opción no válida")
         }
-    } while (opcion != 6)
+    } while (opcion != 6) // Repite hasta que se seleccione salir
 }
