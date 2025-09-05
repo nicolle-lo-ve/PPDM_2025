@@ -26,3 +26,20 @@ class Producto {
         return precio * (1 - descuento / 100)
     }
 }
+
+fun ejecutarProducto() {
+    println("\n=== PRODUCTO ===")
+    val producto = Producto()
+
+    print("Ingrese el precio del producto: ")
+    val precio = readln().toDouble()
+    producto.setPrecio(precio)
+
+    print("Ingrese el descuento (%): ")
+    val descuento = readln().toDouble()
+    producto.setDescuento(descuento)
+
+    println("Precio original: ${producto.getPrecio()}")
+    println("Descuento aplicado: ${producto.getDescuento()}%")
+    println("Precio final: ${producto.calcularPrecioFinal()}")
+}
