@@ -17,3 +17,8 @@ class Circulo(private val radio: Double) : Shape() {
     override fun calcularArea(): Double = 3.14 * radio * radio
     override fun calcularPerimetro(): Double = 2 * Math.PI * radio
 }
+
+class Rectangulo(private val base: Double, private val altura: Double) : Shape() {
+    override fun calcularArea(): Double = base * altura
+    override fun calcularPerimetro(): Double = 2 * (base + altura)
+}
