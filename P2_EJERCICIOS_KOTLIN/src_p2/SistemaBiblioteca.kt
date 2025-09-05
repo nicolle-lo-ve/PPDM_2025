@@ -151,3 +151,74 @@ fun obtenerUsuario(biblioteca: IBiblioteca): Usuario? {
     return biblioteca.obtenerUsuario(nombre, apellido)
 }
 
+
+fun ejecutarBiblioteca() {
+    println("\n=== SISTEMA DE BIBLIOTECA ===")
+    val biblioteca = Biblioteca()
+
+    // Registrar algunos materiales de ejemplo
+    val libro1 = Libro("Cien años de soledad", "Gabriel García Márquez", 1967, "Realismo mágico", 417)
+    val revista1 = Revista("National Geographic", "Varios autores", 2023, "ISSN-1234", 45, 6, "National Geographic Society")
+
+    biblioteca.registrarMaterial(libro1)
+    biblioteca.registrarMaterial(revista1)
+
+    var opcion: Int
+    do {
+        println("\n--- Menú Biblioteca ---")
+        println("1. Registrar usuario")
+        println("2. Mostrar materiales disponibles")
+        println("3. Realizar préstamo")
+        println("4. Realizar devolución")
+        println("5. Mostrar materiales prestados")
+        println("6. Volver al menú principal")
+        print("Seleccione una opción: ")
+
+        opcion = readln().toIntOrNull() ?: 0
+
+        when (opcion) {
+            1 -> {
+                val usuario = obtenerDatosUsuario()
+                biblioteca.registrarUsuario(usuario)
+                println("Usuario registrado: ${usuario.nombre} ${usuario.apellido}")
+            }
+            2 -> biblioteca.mostrarMaterialesDisponibles()
+            3 -> {
+                val usuario = obtenerUsuario(biblioteca)
+                if (usuario != null) {
+                    val material = obtenerMaterialDisponible(biblioteca)
+                    if (material != null) {
+                        biblioteca.prestamo(material, usuario)
+                    } else {
+                        println("Material no encontrado")
+                    }
+                } else {
+                    println("Usuario no encontrado")
+                }
+            }
+            4 -> {
+                val usuario = obtenerUsuario(biblioteca)
+                if (usuario != null) {
+                    val material = obtenerMaterialPrestado(biblioteca, usuario)
+                    if (material != null) {
+                        biblioteca.devolucion(material, usuario)
+                    } else {
+                        println("Material no encontrado")
+                    }
+                } else {
+                    println("Usuario no encontrado")
+                }
+            }
+            5 -> {
+                val usuario = obtenerUsuario(biblioteca)
+                if (usuario != null) {
+                    biblioteca.mostrarMaterialesReservados(usuario)
+                } else {
+                    println("Usuario no encontrado")
+                }
+            }
+            6 -> println("Volviendo al menú principal...")
+            else -> println("Opción no válida")
+        }
+    } while (opcion != 6)
+}
