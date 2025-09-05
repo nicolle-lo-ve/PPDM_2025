@@ -21,4 +21,16 @@ class CuentaBancaria {
     }
 
     fun getLimiteRetiro(): Double = limiteRetiro
+    
+    fun realizarRetiro(monto: Double) {
+        when {
+            monto <= 0 -> println("Error: El monto debe ser positivo")
+            monto > limiteRetiro -> println("Error: Excede el límite de retiro")
+            monto > saldo -> println("Error: Fondos insuficientes")
+            else -> {
+                saldo -= monto
+                println("Retiro exitoso. Saldo restante: $saldo")
+            }
+        }
+    }
 }
