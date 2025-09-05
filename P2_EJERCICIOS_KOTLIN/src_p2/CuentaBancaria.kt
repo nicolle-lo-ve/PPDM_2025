@@ -34,3 +34,30 @@ class CuentaBancaria {
         }
     }
 }
+
+fun ejecutarCuentaBancaria() {
+    println("\n=== CUENTA BANCARIA ===")
+    val cuenta = CuentaBancaria()
+
+    print("Ingrese el saldo inicial: ")
+    val saldoInicial = readln().toDouble()
+    cuenta.setSaldo(saldoInicial)
+
+    print("Ingrese el límite de retiro: ")
+    val limite = readln().toDouble()
+    cuenta.setLimiteRetiro(limite)
+
+    var continuar = true
+    while (continuar) {
+        println("\nSaldo actual: ${cuenta.getSaldo()}")
+        println("Límite de retiro: ${cuenta.getLimiteRetiro()}")
+        print("Ingrese el monto a retirar (0 para salir): ")
+        val monto = readln().toDouble()
+
+        if (monto == 0.0) {
+            continuar = false
+        } else {
+            cuenta.realizarRetiro(monto)
+        }
+    }
+}
