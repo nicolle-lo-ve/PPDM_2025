@@ -30,4 +30,36 @@ fun ejecutarFiguras() {
     println("2. Círculo")
     println("3. Rectángulo")
     print("Opción: ")
+    fun ejecutarFiguras() {
+    println("\n=== FIGURAS GEOMÉTRICAS ===")
+    println("Seleccione la figura:")
+    println("1. Cuadrado")
+    println("2. Círculo")
+    println("3. Rectángulo")
+    print("Opción: ")
+
+    val opcion = readln().toInt()
+
+    when (opcion) {
+        1 -> {
+            val lado = obtenerDoubleDesdeConsola("Ingrese el lado del cuadrado: ")
+            val cuadrado = Cuadrado(lado)
+            println("\nResultados para el cuadrado:")
+            cuadrado.imprimirResultados()
+        }
+        2 -> {
+            val radio = obtenerDoubleDesdeConsola("Ingrese el radio del círculo: ")
+            val circulo = Circulo(radio)
+            println("\nResultados para el círculo:")
+            circulo.imprimirResultados()
+        }
+        3 -> {
+            val base = obtenerDoubleDesdeConsola("Ingrese la base del rectángulo: ")
+            val altura = obtenerDoubleDesdeConsola("Ingrese la altura del rectángulo: ")
+            val rectangulo = Rectangulo(base, altura)
+            println("\nResultados para el rectángulo:")
+            rectangulo.imprimirResultados()
+        }
+        else -> println("Opción no válida")
+    }
 }
