@@ -7,3 +7,8 @@ abstract class Shape {
         println("Perímetro: ${"%.2f".format(calcularPerimetro())}")
     }
 }
+
+class Cuadrado(private val lado: Double) : Shape() {
+    override fun calcularArea(): Double = lado * lado
+    override fun calcularPerimetro(): Double = 4 * lado
+}
