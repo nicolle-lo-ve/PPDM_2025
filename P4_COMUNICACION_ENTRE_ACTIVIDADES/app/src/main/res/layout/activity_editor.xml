@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Descripción: Layout para el editor de notas rápidas
+    Autor: Estudiante de Ingeniería de Software
+    Fecha creación: 01/10/2025
+    Fecha última modificación: 04/10/2025
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editor de Nota Rápida"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/etNota"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:hint="Escribe tu nota aquí..."
+            android:inputType="textMultiLine"
+            android:minLines="10"
+            android:padding="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCompartir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compartir"
+        android:textSize="16sp"/>
+
+</LinearLayout>
