@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout para seleccionar el tipo de comida principal -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="120dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Paso 1: Selecciona tu comida"
+        android:textColor="#2C3E50"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupComida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/radioPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza"
+            android:textSize="14sp"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radioHamburguesa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hamburguesa"
+            android:textSize="14sp"
+            android:padding="12dp"/>
+
+        <RadioButton
+            android:id="@+id/radioEnsalada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ensalada"
+            android:textSize="14sp"
+            android:padding="12dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+</LinearLayout>
