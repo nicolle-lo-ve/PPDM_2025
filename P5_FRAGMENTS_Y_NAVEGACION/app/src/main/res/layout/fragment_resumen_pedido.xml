@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout para mostrar el resumen del pedido -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="120dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="Resumen del Pedido"
+        android:textColor="#2C3E50"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewResumen"
+        android:layout_width="match_parent"
+        android:layout_height="469dp"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        android:background="#ECF0F1"
+        android:padding="4dp"
+        android:text=""
+        android:textColor="#34495E"
+        android:textSize="10sp" />
+
+    <Button
+        android:id="@+id/botonConfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar Pedido"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/botonEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Pedido"
+        android:textSize="18sp"
+        android:padding="12dp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+</LinearLayout>
