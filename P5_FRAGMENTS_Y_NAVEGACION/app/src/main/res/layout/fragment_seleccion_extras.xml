@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout para seleccionar extras del pedido -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="120dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paso 2: Selecciona tus extras"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2C3E50"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puedes seleccionar uno o más extras:"
+        android:textSize="16sp"
+        android:textColor="#7F8C8D"
+        android:layout_marginBottom="16dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxBebida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bebida"
+        android:textSize="14sp"
+        android:padding="12dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxPapas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Papas fritas"
+        android:textSize="14sp"
+        android:padding="12dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxPostre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Postre"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/botonSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+
+</LinearLayout>
