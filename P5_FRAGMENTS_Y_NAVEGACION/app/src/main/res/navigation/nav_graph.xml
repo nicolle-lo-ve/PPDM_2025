@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Grafo de navegación que define las transiciones entre fragments -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.nicolle.configuradorpedido.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio">
+
+        <action
+            android:id="@+id/action_inicioFragment_to_seleccionComidaFragment"
+            app:destination="@id/seleccionComidaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seleccionComidaFragment"
+        android:name="com.nicolle.configuradorpedido.SeleccionComidaFragment"
+        android:label="Seleccionar Comida"
+        tools:layout="@layout/fragment_seleccion_comida">
+
+        <action
+            android:id="@+id/action_seleccionComidaFragment_to_seleccionExtrasFragment"
+            app:destination="@id/seleccionExtrasFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seleccionExtrasFragment"
+        android:name="com.nicolle.configuradorpedido.SeleccionExtrasFragment"
+        android:label="Seleccionar Extras"
+        tools:layout="@layout/fragment_seleccion_extras">
+
+        <action
+            android:id="@+id/action_seleccionExtrasFragment_to_resumenPedidoFragment"
+            app:destination="@id/resumenPedidoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resumenPedidoFragment"
+        android:name="com.nicolle.configuradorpedido.ResumenPedidoFragment"
+        android:label="Resumen del Pedido"
+        tools:layout="@layout/fragment_resumen_pedido">
+
+        <action
+            android:id="@+id/action_resumenPedidoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment"
+            app:popUpTo="@id/inicioFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+</navigation>
