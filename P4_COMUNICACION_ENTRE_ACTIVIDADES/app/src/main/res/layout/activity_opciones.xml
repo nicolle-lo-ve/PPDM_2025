@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Descripción: Layout para mostrar las opciones de la nota
+    Autor: Nicolle Lozano
+    Fecha creación: 01/10/2025
+    Fecha última modificación: 04/10/2025
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu Nota"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dp">
+
+            <TextView
+                android:id="@+id/tvNotaMostrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"/>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCompartirCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compartir por correo"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnEditarDeNuevo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar de nuevo"
+        android:textSize="16sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+</LinearLayout>
