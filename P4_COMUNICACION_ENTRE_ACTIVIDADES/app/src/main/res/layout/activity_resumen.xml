@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Descripción: Layout para mostrar el resumen del perfil del usuario
+    Autor: Nicolle Lozano
+    Fecha creación: 04/10/2025
+    Fecha última modificación: 04/10/2025
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumen del Perfil"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tvResumen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:lineSpacingExtra="8dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnConfirmar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirmar"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnVolverEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver a editar"
+        android:textSize="16sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"/>
+
+</LinearLayout>
